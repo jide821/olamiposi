@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+     <main class="m-auto p-4 rounded w-50 shadow">
+        <h1 class="text-center fw-bolder">Greater numbers</h1>
+        <input type="number" id="a"  class="form-control mt-4 numInput" placeholder="Type in a number">
+        <input type="number" id="b"  class="form-control mt-4 numInput" placeholder="Type in a number">
+        <button class="btn btn-success mt-4" onclick="numberCompare()">Compare Numbers</button>
+        <div id="output" class="text-center fw-bolder text-danger  "></div>
+    </main>
+</body>
+</html>
+<script>
+     let a = 4
+ let b = 3
+ if (a > b){
+    console.log(`${a} is greater than ${b}`);
+ } else {
+    console.log(`${a} is less than ${b}`);
+ }
+ </script>

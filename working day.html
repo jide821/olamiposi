@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check whether weeken or weekday</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+     <main class="m-auto p-4 rounded w-50 shadow">
+        <h1 class="text-center fw-bolder">day Checker</h1>
+        <input type="text" id="a"  class="form-control mt-4 numInput" placeholder="Type in a day">
+        
+        <button class="btn btn-success mt-4" onclick="checkDay()">Check day</button>
+        <div id="output" class="text-center fw-bolder text-danger  "></div>
+    </main>
+</body>
+</html>
+<script>
+    function checkDay() {
+    let  day = document.getElementById('a').value
+    
+    let output = document.getElementById('output')
+     if (day.toLowerCase().trim() === 'saturday'|| day.toLowerCase().trim() === 'sunday') {
+    output.innerHTML = `${day} is a weekend`
+   }
+   else if ( day.toLowerCase().trim() === 'monday' || day.toLowerCase().trim() === 'tuesday' || day.toLowerCase().trim() === 'wednesday' || day.toLowerCase().trim() === 'thursday' || day.toLowerCase().trim() === 'friday') {
+    output.innerHTML = `${day} is a working day`;
+   }
+  
+   else {
+    output.innerHTML("Invalid input")
+   }
+}
+</script>

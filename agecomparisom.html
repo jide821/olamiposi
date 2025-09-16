@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+     <main class="m-auto p-4 rounded w-50 shadow">
+        <h1 class="text-center fw-bolder">Age comparisn</h1>
+        <input type="number" id="myAge"  class="form-control mt-4 numInput" placeholder="My age">
+        <input type="number" id="yourAge"  class="form-control mt-4 numInput" placeholder="Your age">
+        <button class="btn btn-success mt-4" onclick="ageCompare()">Compare age</button>
+        <div id="output" class="text-center fw-bolder text-danger  "></div>
+    </main>
+</body>
+</html>
+<script>
+    function ageCompare() {
+    let  MyAge = document.getElementById('MyAge').value.trim()
+    let YourAge = document.getElementById('YourAge').value.trim()
+    let output = document.getElementById('output')
+    if (+MyAge < 0 || +YourAge < 0 ) {
+        output.innerHTML = 'Invalid Age'
+    }
+    else if (+MyAge > 100 || +YourAge > 100 ){
+        output.innerHTML = 'Invalid Age'
+    }
+    else if (+MyAge > +YourAge ) {
+            output.innerHTML = ` I am ${+MyAge - +YourAge } years older than you`
+        }
+     else if (+MyAge < +YourAge ) {
+            output.innerHTML = ` You are ${+YourAge - +MyAge  } years older than me`
+        }
+    }
+</script>
